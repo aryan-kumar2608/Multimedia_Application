@@ -1,0 +1,413 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #071a3d;
+    --blue: #123c85;
+    --cyan: #38bdf8;
+    --green: #22c55e;
+    --gold: #f59e0b;
+    --ink: #172033;
+    --surface: #ffffff;
+}
+
+
+/* Body */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 28rem),
+        #eef3f8;
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+body.audio-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body.audio-page main {
+    width: 100%;
+    flex: 1;
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 72px 20px 58px;
+    background:
+        linear-gradient(135deg, rgba(7, 26, 61, 0.96), rgba(18, 60, 133, 0.92)),
+        var(--navy);
+    color: white;
+}
+
+.hero.compact {
+    padding: 44px 20px 36px;
+}
+
+.eyebrow {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: var(--navy);
+    box-shadow: 0 8px 24px rgba(7, 26, 61, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 999px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+}
+
+
+/* Main Sections */
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* Student Details */
+.student-section {
+    background-color: var(--surface);
+    margin: 40px 20px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(31, 41, 55, 0.08);
+}
+
+.student-section h2,
+.activities-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.student-details {
+    max-width: 600px;
+    margin: auto;
+}
+
+.student-details p {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Activities */
+.activities-section {
+    margin: 40px 20px;
+}
+
+.activity-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* Activity Cards */
+.activity-card {
+    background-color: var(--surface);
+    width: 300px;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    border-top: 4px solid var(--cyan);
+    box-shadow: 0 12px 35px rgba(31, 41, 55, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(31, 41, 55, 0.14);
+}
+
+.activity-card h3 {
+    margin-bottom: 15px;
+}
+
+.activity-card p {
+    margin-bottom: 20px;
+}
+
+.activity-card a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: var(--blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.activity-card a:hover {
+    background-color: var(--navy);
+}
+
+
+/* Media pages */
+.content-section {
+    margin: 40px 20px 70px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: var(--navy);
+}
+
+.status-pill {
+    background: #dbeafe;
+    color: var(--blue);
+    border-radius: 999px;
+    padding: 7px 13px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.media-card {
+    overflow: hidden;
+    background: var(--surface);
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(31, 41, 55, 0.10);
+}
+
+.media-card > img,
+.media-card > a > img,
+.media-card > video {
+    width: 100%;
+    height: 260px;
+    display: block;
+    object-fit: cover;
+    background: #dbe3ed;
+}
+
+.media-link {
+    display: block;
+    cursor: zoom-in;
+}
+
+.media-link:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: -3px;
+}
+
+.video-grid .media-card > video {
+    height: 220px;
+}
+
+.media-info {
+    padding: 20px;
+}
+
+.media-info h3 {
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.media-info p {
+    color: #64748b;
+}
+
+.process-section {
+    margin-top: 10px;
+}
+
+.process-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    list-style: none;
+    counter-reset: process-step;
+}
+
+.process-list li {
+    position: relative;
+    min-height: 120px;
+    padding: 22px 20px 20px 68px;
+    background: var(--surface);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+    color: #64748b;
+    counter-increment: process-step;
+}
+
+.process-list li::before {
+    content: counter(process-step);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    font-weight: 800;
+}
+
+.process-list strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--navy);
+}
+
+.audio-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+    align-items: center;
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 12px 35px rgba(31, 41, 55, 0.10);
+}
+
+.audio-icon {
+    width: 120px;
+    height: 120px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: white;
+    font-size: 52px;
+}
+
+.audio-details h3 {
+    color: var(--navy);
+}
+
+.audio-details p {
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.audio-details audio {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: var(--navy);
+    color: white;
+}
+
+body.audio-page .footer {
+    margin-top: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .navbar {
+        overflow-x: auto;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 4px;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+    }
+
+    .student-section {
+        padding: 25px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .audio-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 18px;
+        padding: 22px 18px;
+    }
+
+    .audio-icon {
+        margin: 0 auto;
+    }
+
+    .content-section {
+        margin: 28px 16px 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .process-list {
+        grid-template-columns: 1fr;
+    }
+
+    body.audio-page .footer {
+        padding: 20px 14px;
+    }
+
+}
